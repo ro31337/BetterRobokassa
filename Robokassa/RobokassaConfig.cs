@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Robokassa
+namespace BetterRobokassa.Robokassa
 {
     public static class RobokassaConfig
     {
