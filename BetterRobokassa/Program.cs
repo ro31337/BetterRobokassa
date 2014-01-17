@@ -10,6 +10,8 @@ namespace BetterRobokassa
     {
         static void Main(string[] args)
         {
+            string redirectUrl = Robokassa.Robokassa.GetRedirectUrl(1000, 1);
+            Console.WriteLine(redirectUrl);
         }
     }
 }

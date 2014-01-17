@@ -37,8 +37,8 @@ namespace BetterRobokassa.Robokassa
 
             string sCrc = sbSignature.ToString();
 
-            return "https://auth.robokassa.ru/Merchant/Index.aspx?" +
-            //return "http://test.robokassa.ru/Index.aspx?" +
+            //return "https://auth.robokassa.ru/Merchant/Index.aspx?" +
+            return "http://test.robokassa.ru/Index.aspx?" +
                                                 "MrchLogin=" + sMrchLogin +
                                                 "&OutSum=" + sOutSum +
                                                 "&InvId=" + nInvId +
