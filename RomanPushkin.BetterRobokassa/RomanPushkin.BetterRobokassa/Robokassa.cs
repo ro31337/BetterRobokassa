@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BetterRobokassa.Robokassa
+namespace RomanPushkin.BetterRobokassa
 {
     public static class Robokassa
     {
