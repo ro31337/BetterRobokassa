@@ -6,7 +6,7 @@ Better support for [Robokassa.ru][1] for .Net
 Why BetterRobokassa?
 --------------------
 
-Native Robokassa documentation and code for Microsoft .Net is bit confusing. The goal of this library is to provide easy to use code with plenty of working samples.
+Native Robokassa documentation and code for Microsoft .Net are bit confusing. The goal of this library is to provide easy to use code with plenty of working samples.
 
 How to use
 ----------
@@ -16,24 +16,22 @@ Make sure you have correct keys set in your .config file (appSettings section):
     <add key="RobokassaLogin" value="your_merchant" />
     <add key="RobokassaPass1" value="password1" />
     <add key="RobokassaPass2" value="password2" />
+    <add key="RobokassaMode" value="Test" /> <!-- Test or Production -->
+    
+RobokassaMode has two types:
 
-Choose the mode you want to play with: test mode or production. To enable production mode make sure the line 40 in Robokassa/Robokassa.cs is uncommented and line 41 is commented out:
+ - `Test` - uses `http://test.robokassa.ru/Index.aspx` as base url
+ - `Production` - uses `https://auth.robokassa.ru/Merchant/Index.aspx?` as base url
 
-    return "https://auth.robokassa.ru/Merchant/Index.aspx?" +
-    //return "http://test.robokassa.ru/Index.aspx?" +
+Run sample console application (**Example1**) to generate redirect url:
 
-To enable test mode, make sure that line 40 is commented, and line 41 is uncommented:
-
-    //return "https://auth.robokassa.ru/Merchant/Index.aspx?" +
-    return "http://test.robokassa.ru/Index.aspx?" +
-
-Run sample application to generate redirect url:
-
-    C:\Projects4\BetterRobokassa\BetterRobokassa\bin\Debug>BetterRobokassa.exe
+    C:\Projects4\BetterRobokassa\Example1\Example1\bin\Debug\Example1.exe
 
 Output (in case of test mode):
 
     http://test.robokassa.ru/Index.aspx?MrchLogin=your_merchant&OutSum=1000.00&InvId=1&Desc=desc&SignatureValue=00a09f4eab03374b536539a5ee57ea2a
+
+**Important!** Make sure you compiled RomanPushkin.BetterRobokassa project in Debug mode before compiling the sample code. All of the samples have a reference to `RomanPushkin.BetterRobokassa.dll`.  
 
 Output is result url you may want to use in your application to redirect your customer. Sample code for ASP.NET MVC controller:
 
@@ -51,7 +49,7 @@ Output is result url you may want to use in your application to redirect your cu
 Things you need to know
 -----------------------
 
-Keep in mind that there are two passwords for Robokassa:
+Keep in mind that there are two passwords exist for Robokassa:
 
  - First password is used in so called *result url* (personally, I call it confirmation url)
  - Second password is used in so called *success url*
