@@ -23,6 +23,14 @@ RobokassaMode has two types:
  - `Test` - uses `http://test.robokassa.ru/Index.aspx` as base url
  - `Production` - uses `https://auth.robokassa.ru/Merchant/Index.aspx?` as base url
 
+Important
+---------
+
+**Important!** Make sure you compiled RomanPushkin.BetterRobokassa project in Debug mode before compiling the sample code. All of the samples have a reference to `RomanPushkin.BetterRobokassa.dll`.  
+
+Example1
+========
+
 Run sample console application (**Example1**) to generate redirect url:
 
     C:\Projects4\BetterRobokassa\Example1\Example1\bin\Debug\Example1.exe
@@ -30,8 +38,6 @@ Run sample console application (**Example1**) to generate redirect url:
 Output (in case of test mode):
 
     http://test.robokassa.ru/Index.aspx?MrchLogin=your_merchant&OutSum=1000.00&InvId=1&Desc=desc&SignatureValue=00a09f4eab03374b536539a5ee57ea2a
-
-**Important!** Make sure you compiled RomanPushkin.BetterRobokassa project in Debug mode before compiling the sample code. All of the samples have a reference to `RomanPushkin.BetterRobokassa.dll`.  
 
 Output is result url you may want to use in your application to redirect your customer. Sample code for ASP.NET MVC controller:
 
