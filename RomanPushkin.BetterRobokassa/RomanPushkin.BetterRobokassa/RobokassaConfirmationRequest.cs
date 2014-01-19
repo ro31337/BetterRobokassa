@@ -8,12 +8,6 @@ using System.Threading.Tasks;
 
 namespace RomanPushkin.BetterRobokassa
 {
-    public enum RobokassaQueryType
-    {
-        ResultURL,
-        SuccessURL
-    }
-
     public class RobokassaConfirmationRequest
     {
         public string OutSum { get; set; }
