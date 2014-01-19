@@ -44,6 +44,8 @@
     <Compile Include="Robokassa.cs" />
     <Compile Include="RobokassaConfig.cs" />
     <Compile Include="RobokassaConfirmationRequest.cs" />
+    <Compile Include="RobokassaMode.cs" />
+    <Compile Include="RobokassaQueryType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

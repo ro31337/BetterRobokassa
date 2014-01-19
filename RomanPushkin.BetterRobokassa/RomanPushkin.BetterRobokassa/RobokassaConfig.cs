@@ -32,5 +32,22 @@ namespace RomanPushkin.BetterRobokassa
                 return ConfigurationManager.AppSettings["RobokassaPass2"];
             }
         }
+
+        public static RobokassaMode Mode
+        {
+            get
+            {
+                string mode = ConfigurationManager.AppSettings["RobokassaMode"];
+                switch(mode.ToLower())
+                {
+                    case "test":
+                        return RobokassaMode.Test;
+                    case "production":
+                        return RobokassaMode.Production;
+                    default:
+                        throw new NotSupportedException();
+                }
+            }
+        }
     }
 }

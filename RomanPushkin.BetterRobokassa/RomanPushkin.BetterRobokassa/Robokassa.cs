@@ -37,14 +37,26 @@ namespace RomanPushkin.BetterRobokassa
 
             string sCrc = sbSignature.ToString();
 
-            //return "https://auth.robokassa.ru/Merchant/Index.aspx?" +
-            return "http://test.robokassa.ru/Index.aspx?" +
-                                                "MrchLogin=" + sMrchLogin +
-                                                "&OutSum=" + sOutSum +
-                                                "&InvId=" + nInvId +
-                                                "&Desc=" + sDesc +
-                                                "&SignatureValue=" + sCrc +
-                                                (String.IsNullOrEmpty(email) ? "" : "&Email=" + email);
+            return getBaseUrl() +
+                "MrchLogin=" + sMrchLogin +
+                "&OutSum=" + sOutSum +
+                "&InvId=" + nInvId +
+                "&Desc=" + sDesc +
+                "&SignatureValue=" + sCrc +
+                (String.IsNullOrEmpty(email) ? "" : "&Email=" + email);
+        }
+
+        private static string getBaseUrl()
+        {
+            switch(RobokassaConfig.Mode)
+            {
+                case RobokassaMode.Test:
+                    return "http://test.robokassa.ru/Index.aspx?";
+                case RobokassaMode.Production:
+                    return "https://auth.robokassa.ru/Merchant/Index.aspx?";
+                default:
+                    throw new NotSupportedException();
+            }
         }
     }
 }
