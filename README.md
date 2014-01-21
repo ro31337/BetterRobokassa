@@ -21,7 +21,7 @@ Make sure you have correct keys set in your .config file (appSettings section):
 RobokassaMode has two types:
 
  - `Test` - uses `http://test.robokassa.ru/Index.aspx` as base url
- - `Production` - uses `https://auth.robokassa.ru/Merchant/Index.aspx?` as base url
+ - `Production` - uses `https://auth.robokassa.ru/Merchant/Index.aspx` as base url
 
 Important
 ---------
@@ -66,7 +66,7 @@ First one (*result* or *confirmation url*) is used by Robokassa's robot. The rob
 
 Second (*success url*) is used to redirect the customer back to your website. Confirmation hashcode is generated using the second password in this case (`RobokassaPass2` in config file).
 
-Don't miss this point, and use correct `RobokassaQueryType` when verifying incoming requests. **Most of your bugs are probably happen if you're not using these types properly**.
+Don't miss this point, and use correct `RobokassaQueryType` while verifying incoming requests. **Most of your bugs are probably happen if you're not using these types properly**.
 
 How to use BetterRobokassa with ASP.NET MVC
 -------------------------------------------
