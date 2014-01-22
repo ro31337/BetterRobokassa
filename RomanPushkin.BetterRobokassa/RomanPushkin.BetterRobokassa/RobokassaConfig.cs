@@ -45,9 +45,23 @@ namespace RomanPushkin.BetterRobokassa
                     case "production":
                         return RobokassaMode.Production;
                     default:
-                        throw new NotSupportedException();
+                        throw new NotSupportedException("Mode is not supported, available modes: test or production");
                 }
             }
+        }
+
+        public static void AssertConfigurationIsValid()
+        {
+            if (String.IsNullOrWhiteSpace(Login))
+                throw new Exception("Robokassa configuration: login is required");
+
+            if (String.IsNullOrWhiteSpace(Pass1))
+                throw new Exception("Robokassa configuration: first password is required");
+
+            if (String.IsNullOrWhiteSpace(Pass2))
+                throw new Exception("Robokassa configuration: second password is required");
+
+            var mode = Mode;
         }
     }
 }
