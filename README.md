@@ -23,17 +23,12 @@ RobokassaMode has two types:
  - `Test` - uses `http://test.robokassa.ru/Index.aspx` as base url
  - `Production` - uses `https://auth.robokassa.ru/Merchant/Index.aspx` as base url
 
-Important
----------
-
-**Important!** Make sure you compiled RomanPushkin.BetterRobokassa project in Debug mode before compiling the sample code. All of the samples have a reference to `RomanPushkin.BetterRobokassa.dll`.  
-
 Example1
 ========
 
 Run sample console application (**Example1**) to generate redirect url:
 
-    C:\Projects4\BetterRobokassa\Example1\Example1\bin\Debug\Example1.exe
+    C:\Projects4\BetterRobokassa\Example1\bin\Debug\Example1.exe
 
 Output (in case of test mode):
 
