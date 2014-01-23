@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RomanPushkin.BetterRobokassa">
-      <HintPath>..\..\RomanPushkin.BetterRobokassa\RomanPushkin.BetterRobokassa\bin\Debug\RomanPushkin.BetterRobokassa.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RomanPushkin.BetterRobokassa\RomanPushkin.BetterRobokassa.csproj">
+      <Project>{ea6e2524-ffb3-4019-9975-cea866b4c240}</Project>
+      <Name>RomanPushkin.BetterRobokassa</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

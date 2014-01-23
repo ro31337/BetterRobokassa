@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanPushkin.BetterRobokassa", "RomanPushkin.BetterRobokassa\RomanPushkin.BetterRobokassa.csproj", "{EA6E2524-FFB3-4019-9975-CEA866B4C240}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example1", "Example1\Example1.csproj", "{07881121-969A-4078-BAB1-FD2644D36E28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EA6E2524-FFB3-4019-9975-CEA866B4C240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6E2524-FFB3-4019-9975-CEA866B4C240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6E2524-FFB3-4019-9975-CEA866B4C240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07881121-969A-4078-BAB1-FD2644D36E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07881121-969A-4078-BAB1-FD2644D36E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07881121-969A-4078-BAB1-FD2644D36E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07881121-969A-4078-BAB1-FD2644D36E28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
