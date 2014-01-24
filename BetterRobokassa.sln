@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanPushkin.BetterRobokass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example1", "Example1\Example1.csproj", "{07881121-969A-4078-BAB1-FD2644D36E28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example2", "Example2\Example2.csproj", "{3B9DBA03-6D74-4D87-9257-AC8EB6DAE791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{07881121-969A-4078-BAB1-FD2644D36E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07881121-969A-4078-BAB1-FD2644D36E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07881121-969A-4078-BAB1-FD2644D36E28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9DBA03-6D74-4D87-9257-AC8EB6DAE791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9DBA03-6D74-4D87-9257-AC8EB6DAE791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9DBA03-6D74-4D87-9257-AC8EB6DAE791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9DBA03-6D74-4D87-9257-AC8EB6DAE791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
