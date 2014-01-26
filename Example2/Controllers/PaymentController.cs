@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RomanPushkin.BetterRobokassa;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,14 @@ namespace Example2.Controllers
     {
         public ActionResult Index()
         {
-            throw new NotImplementedException();
+            int priceRub = 1000;
+            int orderId = 1;
+
+            // note: use GetRedirectUrl overloading to specify customer email
+
+            string redirectUrl = Robokassa.GetRedirectUrl(priceRub, orderId);
+
+            return Redirect(redirectUrl);
         }
 
     }
