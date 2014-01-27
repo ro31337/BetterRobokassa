@@ -21,5 +21,24 @@ namespace Example2.Controllers
             return Redirect(redirectUrl);
         }
 
+        // So called "Result Url" in terms of Robokassa documentation.
+        // This url is called by Robokassa robot.
+
+        public ActionResult Confirm(RobokassaConfirmationRequest confirmationRequest)
+        {
+            try
+            {
+                if (confirmationRequest.IsQueryValid(RobokassaQueryType.ResultURL))
+                {
+                    // TODO:
+                    // 1. verify your order Id and price here
+                    // 2. mark your order as paid
+
+                    return Content("OK");
+                }
+            }
+            catch (Exception) { }
+            return Content("ERR");
+        }
     }
 }
