@@ -59,5 +59,10 @@ namespace Example2.Controllers
 
             return Content("ERR");
         }
+
+        public ActionResult Fail()
+        {
+            return View();
+        }
     }
 }
