@@ -34,10 +34,29 @@ namespace Example2.Controllers
                     // 1. verify your order Id and price here
                     // 2. mark your order as paid
 
-                    return Content("OK");
+                    return Content("OK"); // content for robot
                 }
             }
             catch (Exception) { }
+            return Content("ERR");
+        }
+
+        public ActionResult Success(RobokassaConfirmationRequest confirmationRequest)
+        {
+            try
+            {
+
+                if (confirmationRequest.IsQueryValid(RobokassaQueryType.SuccessURL))
+                {
+                    // TODO:
+                    // 1. verify your order Id and price here
+                    // 2. mark your order as paid
+
+                    return View(); // content for user
+                }
+            }
+            catch (Exception) { }
+
             return Content("ERR");
         }
     }
