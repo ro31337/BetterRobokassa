@@ -60,7 +60,7 @@ namespace Example2.Controllers
             }
             catch (Exception) { }
 
-            return Content("ERR");
+            return View("Fail");
         }
 
         // So called "Fail Url" in terms of Robokassa documentation.
