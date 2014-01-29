@@ -41,6 +41,9 @@ namespace Example2.Controllers
             return Content("ERR");
         }
 
+        // So called "Success Url" in terms of Robokassa documentation.
+        // Customer is redirected to this url after successful payment. 
+
         public ActionResult Success(RobokassaConfirmationRequest confirmationRequest)
         {
             try
@@ -59,6 +62,9 @@ namespace Example2.Controllers
 
             return Content("ERR");
         }
+
+        // So called "Fail Url" in terms of Robokassa documentation.
+        // Customer is redirected to this url after unsuccessful payment.
 
         public ActionResult Fail()
         {
