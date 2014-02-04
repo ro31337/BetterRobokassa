@@ -30,9 +30,7 @@ namespace Example2.Controllers
             {
                 if (confirmationRequest.IsQueryValid(RobokassaQueryType.ResultURL))
                 {
-                    // TODO:
-                    // 1. verify your order Id and price here
-                    // 2. mark your order as paid
+                    processOrder(confirmationRequest);
 
                     return Content("OK"); // content for robot
                 }
@@ -51,9 +49,7 @@ namespace Example2.Controllers
 
                 if (confirmationRequest.IsQueryValid(RobokassaQueryType.SuccessURL))
                 {
-                    // TODO:
-                    // 1. verify your order Id and price here
-                    // 2. mark your order as paid
+                    processOrder(confirmationRequest);
 
                     return View(); // content for user
                 }
@@ -69,6 +65,13 @@ namespace Example2.Controllers
         public ActionResult Fail()
         {
             return View();
+        }
+
+        private void processOrder(RobokassaConfirmationRequest confirmationRequest)
+        {
+            // TODO:
+            // 1. verify your order Id and price here
+            // 2. mark your order as paid
         }
     }
 }
