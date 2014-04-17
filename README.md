@@ -80,10 +80,14 @@ Second (*success url*) is used to redirect the customer back to your website. Co
 
 Don't miss this point, and use correct `RobokassaQueryType` while verifying incoming requests. **Most of your bugs are probably happen if you're not using these types properly**.
 
+Strange bug with pass1 and pass2
+--------------------------------
+
+Don't use uppercase letters in your password1 and password2. If you do, you'll get error telling your signature is malformed. Use only lowercase letters.
+
 Confirm, Success, Fail url settings
 -----------------------------------
 
 ![robokassa_settings](https://f.cloud.github.com/assets/1477672/2059844/19f571fa-8bdc-11e3-83f3-7bedd834ae3f.png)
 
   [1]: http://robokassa.ru
-
